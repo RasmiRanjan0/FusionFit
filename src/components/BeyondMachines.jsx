@@ -41,7 +41,7 @@ const BeyondMachines = () => {
           ].map((feature, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-4 border border-gray-600 rounded-lg px-4 py-3 hover:bg-gray-800 transition"
+              className="flex items-center gap-4 border border-gray-600 rounded-2xl px-4 py-3 hover:bg-gray-800 transition"
             >
               <div className="text-xl">{feature.icon}</div>
               <p className="text-sm font-semibold text-white tracking-wide">

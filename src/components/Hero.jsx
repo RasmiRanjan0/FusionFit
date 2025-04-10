@@ -3,7 +3,7 @@ import bgImage from '../assets/hero-bg.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen bg-black text-white overflow-hidden">
+    <section className="w-full h-screen bg-black text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
