@@ -157,7 +157,113 @@
 
 
 
+// import React, { useEffect, useState } from 'react';
+
+// // Image imports
+// import treadmill1 from '../assets/fitness-bg.png';
+// import treadmill2 from '../assets/hero-bg.jpg';
+// import treadmill3 from '../assets/fitness-bg.png';
+// import treadmill4 from '../assets/hero-bg.jpg';
+// import treadmill5 from '../assets/fitness-bg.png';
+// import treadmill6 from '../assets/hero-bg.jpg';
+// import treadmill7 from '../assets/fitness-bg.png';
+// import treadmill8 from '../assets/hero-bg.jpg';
+
+// const images = [
+//   treadmill1,
+//   treadmill2,
+//   treadmill3,
+//   treadmill4,
+//   treadmill5,
+//   treadmill6,
+//   treadmill7,
+//   treadmill8,
+// ];
+
+// const OurMachines = () => {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <section className="bg-black px-4 sm:px-6 md:px-20 py-16 text-white">
+//       {/* Title */}
+//       <div className="text-center mb-12">
+//         <p className="text-sm font-medium text-gray-400 tracking-widest flex items-center justify-center gap-2">
+//           <span className="text-[10px]">●</span> OUR MACHINES
+//         </p>
+//         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 max-w-5xl mx-auto leading-snug">
+//           TRANSFORM YOUR GYM INTO THE SPACE <br className="hidden sm:block" /> YOU&apos;VE ALWAYS
+//           DREAMED OF
+//         </h2>
+//       </div>
+
+//       {/* Content container */}
+//       <div className="bg-[#1F1F1F] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl">
+//         {/* Left content */}
+//         <div className="w-full lg:w-1/2">
+//           <h3 className="text-3xl md:text-4xl font-bold mb-4">BUCKLER MACHINES</h3>
+//           <p className="text-sm md:text-base text-gray-300 mb-6">
+//             Transcend the ordinary with our product line. Here, excellence meets innovation,
+//             bringing you the most advanced technology on the market in a way you&apos;ve never seen
+//             before. Every detail, every movement, every piece of equipment is designed to deliver
+//             an unparalleled training experience. With Inception, you don&apos;t just train – you
+//             evolve.
+//           </p>
+//           <button className="flex items-center gap-3 px-6 py-3 border border-white text-white rounded-full font-medium hover:bg-white hover:text-black transition">
+//             Talk to an expert
+//             <span className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">
+//               →
+//             </span>
+//           </button>
+//         </div>
+
+//         {/* Right slideshow */}
+//         <div className="w-full lg:w-1/2 relative">
+//           <div className="bg-[#2B2B2B] p-4 sm:p-6 rounded-3xl flex flex-col items-center justify-center w-full h-[320px] sm:h-[360px] md:h-[420px] lg:h-[480px] overflow-hidden">
+//             <img
+//               src={images[currentIndex]}
+//               alt={`Buckler treadmill ${currentIndex + 1}`}
+//               className="h-full w-full object-contain transition-all duration-700 ease-in-out"
+//             />
+
+//             {/* Progress bar and counter */}
+//             <div className="mt-6 w-full flex flex-col items-center">
+//               {/* Dots */}
+//               <div className="flex gap-2 mb-2">
+//                 {images.map((_, i) => (
+//                   <span
+//                     key={i}
+//                     className={`h-[2px] w-6 ${
+//                       i === currentIndex ? 'bg-white' : 'bg-[#555555]'
+//                     } rounded-full transition-all duration-300`}
+//                   />
+//                 ))}
+//               </div>
+//               {/* Counter */}
+//               <p className="text-sm font-semibold text-white">
+//                 {String(currentIndex + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default OurMachines;
+
+
+
+
 import React, { useEffect, useState } from 'react';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 // Image imports
 import treadmill1 from '../assets/fitness-bg.png';
@@ -192,8 +298,14 @@ const OurMachines = () => {
 
   return (
     <section className="bg-black px-4 sm:px-6 md:px-20 py-16 text-white">
-      {/* Title */}
-      <div className="text-center mb-12">
+      {/* Section Title */}
+      <Motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-12"
+      >
         <p className="text-sm font-medium text-gray-400 tracking-widest flex items-center justify-center gap-2">
           <span className="text-[10px]">●</span> OUR MACHINES
         </p>
@@ -201,12 +313,24 @@ const OurMachines = () => {
           TRANSFORM YOUR GYM INTO THE SPACE <br className="hidden sm:block" /> YOU&apos;VE ALWAYS
           DREAMED OF
         </h2>
-      </div>
+      </Motion.div>
 
       {/* Content container */}
-      <div className="bg-[#1F1F1F] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl">
+      <Motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="bg-[#1F1F1F] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
+      >
         {/* Left content */}
-        <div className="w-full lg:w-1/2">
+        <Motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-full lg:w-1/2"
+        >
           <h3 className="text-3xl md:text-4xl font-bold mb-4">BUCKLER MACHINES</h3>
           <p className="text-sm md:text-base text-gray-300 mb-6">
             Transcend the ordinary with our product line. Here, excellence meets innovation,
@@ -221,38 +345,56 @@ const OurMachines = () => {
               →
             </span>
           </button>
-        </div>
+        </Motion.div>
 
         {/* Right slideshow */}
-        <div className="w-full lg:w-1/2 relative">
+        <Motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-full lg:w-1/2 relative"
+        >
           <div className="bg-[#2B2B2B] p-4 sm:p-6 rounded-3xl flex flex-col items-center justify-center w-full h-[320px] sm:h-[360px] md:h-[420px] lg:h-[480px] overflow-hidden">
-            <img
-              src={images[currentIndex]}
-              alt={`Buckler treadmill ${currentIndex + 1}`}
-              className="h-full w-full object-contain transition-all duration-700 ease-in-out"
-            />
+            <AnimatePresence mode="wait">
+              <Motion.img
+                key={currentIndex}
+                src={images[currentIndex]}
+                alt={`Buckler treadmill ${currentIndex + 1}`}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.05 }}
+                transition={{ duration: 0.8 }}
+                className="h-full w-full object-contain absolute"
+              />
+            </AnimatePresence>
 
             {/* Progress bar and counter */}
-            <div className="mt-6 w-full flex flex-col items-center">
-              {/* Dots */}
+            <div className="relative z-10 mt-6 w-full flex flex-col items-center">
               <div className="flex gap-2 mb-2">
                 {images.map((_, i) => (
-                  <span
+                  <Motion.span
                     key={i}
-                    className={`h-[2px] w-6 ${
+                    className={`h-[2px] w-6 rounded-full ${
                       i === currentIndex ? 'bg-white' : 'bg-[#555555]'
-                    } rounded-full transition-all duration-300`}
+                    }`}
+                    layout
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   />
                 ))}
               </div>
-              {/* Counter */}
-              <p className="text-sm font-semibold text-white">
+              <Motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-sm font-semibold text-white"
+              >
                 {String(currentIndex + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
-              </p>
+              </Motion.p>
             </div>
           </div>
-        </div>
-      </div>
+        </Motion.div>
+      </Motion.div>
     </section>
   );
 };

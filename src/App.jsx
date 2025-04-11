@@ -1,15 +1,11 @@
 
 import './App.css'
-import AboutGymbox from './components/AboutGymbox'
-import BeyondMachines from './components/BeyondMachines'
-import CompleteExperience from './components/CompleteExperience'
-import Footer from './components/Footer'
-import Footer2 from './components/Footer2'
-import Hero from './components/Hero'
-import HeroSection from './components/HeroSection'
-import Navbar from './components/Navbar'
-import OurMachines from './components/OurMachines'
+import Footer2 from './components/Footer2';
 
+import Navbar from './components/Navbar'
+import Gallery from './pages/Gallery';
+import Home from './pages/Home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
 
 
@@ -17,16 +13,15 @@ function App() {
     <>
     <div className='bg-[#0a0a0a]' >
 
-    <Navbar/>
-    <HeroSection/>
-    {/* <Hero/> */}
-    {/* <AboutGymbox/> */}
-    {/* <BeyondMachines/> */}
-    <CompleteExperience/>
-    <OurMachines/>
-
-    {/* <Footer/> */}
-    <Footer2/>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        
+      </Routes>
+      <Footer2/>
+    </BrowserRouter>
     </div>
     </>
   )
