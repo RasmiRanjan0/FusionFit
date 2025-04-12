@@ -8,6 +8,10 @@ import AppSection from '../components/Home/AppSection'
 import OurClasses from '../components/OurClasses'
 import OurTrainer from '../components/Home/OurTrainer'
 import PricingPlans from '../components/Home/PricingPlans'
+import OurJourney from '../components/Home/OurJourney'
+import Reviews from '../components/Home/Reviews'
+import FAQ from '../components/Home/FAQ'
+import TalkCard from '../components/Home/TalkCard'
 
 
 const Home = () => {
@@ -19,7 +23,11 @@ const Home = () => {
         <OurClasses/>
         <OurTrainer/>
         <PricingPlans/>
-        <OurMachines/>
+        <OurJourney/>
+        <Reviews/>
+        <FAQ/>
+        <TalkCard/>
+        {/* <OurMachines/> */}
     </div>
   )
 }

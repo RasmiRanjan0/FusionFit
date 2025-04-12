@@ -123,7 +123,7 @@ const AppSection = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="bg-[#1F1F1F] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
+        className="bg-[#0a0a0a] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
       >
         {/* Left Content */}
         <Motion.div variants={fadeLeft} className="flex-1 text-left">

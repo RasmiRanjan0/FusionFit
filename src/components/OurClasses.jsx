@@ -154,14 +154,14 @@ import React from 'react';
 import { motion as Motion } from 'framer-motion';
 
 // Image imports (adjust paths)
-import machinesImg from '../assets/hero-bg.jpg';
-import careImg from '../assets/hero-bg.jpg';
-import gaasImg from '../assets/hero-bg.jpg';
+import machinesImg from '../assets/MINDFUL MEDITAION.jpg';
+import careImg from '../assets/FUNCTIONAL FITNESS.jpg';
+import gaasImg from '../assets/YOGA FUSION.jpg';
 
 const services = [
   { title: 'MINDFUL MEDITAION', image: machinesImg },
   { title: 'FUNCTIONAL FITNESS', image: careImg },
-  { title: 'YOGAFUSION', image: gaasImg },
+  { title: 'YOGA FUSION', image: gaasImg },
 ];
 
 // Motion Variants
