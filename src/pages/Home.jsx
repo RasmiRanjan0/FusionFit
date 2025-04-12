@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../components/HeroSection'
+
 
 import OurMachines from '../components/OurMachines'
 import Footer2 from '../components/Footer2'
@@ -12,6 +12,7 @@ import OurJourney from '../components/Home/OurJourney'
 import Reviews from '../components/Home/Reviews'
 import FAQ from '../components/Home/FAQ'
 import TalkCard from '../components/Home/TalkCard'
+import HeroSection from '../components/Home/HeroSection'
 
 
 const Home = () => {

@@ -397,10 +397,150 @@
 // export default Navbar;
 
 
+// import React, { useState, useEffect } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+// import { FaBars, FaTimes } from 'react-icons/fa';
+// import { motion as Motion } from 'framer-motion'; // ✅ Properly renamed for ESLint
+
+// const Navbar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [showNavbar, setShowNavbar] = useState(true);
+//   const [lastScrollY, setLastScrollY] = useState(0);
+//   const location = useLocation();
+
+//   const navLinks = [
+//     { name: 'HOME', to: '/' },
+//     { name: 'GALLERY', to: '/gallery' },
+//     { name: 'APP', to: '/app' },
+//     { name: 'ADMISSION', to: '/admission' },
+//     { name: 'CONTACT', to: '/contact' },
+//   ];
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const currentY = window.scrollY;
+//       if (currentY > lastScrollY && currentY > 80) {
+//         setShowNavbar(false);
+//       } else {
+//         setShowNavbar(true);
+//       }
+//       setLastScrollY(currentY);
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, [lastScrollY]);
+
+//   useEffect(() => {
+//     setIsOpen(false);
+//   }, [location.pathname]);
+
+//   const isActive = (path) => location.pathname === path;
+
+//   return (
+//     <Motion.nav
+//       initial={{ y: -100 }}
+//       animate={{ y: showNavbar ? 0 : -100 }}
+//       transition={{ duration: 0.4, ease: 'easeInOut' }}
+//       className="fixed top-0 left-0 w-full z-50 py-4"
+//     >
+//       <div className="max-w-[1440px] mx-auto px-6">
+//         <div className="text-white backdrop-blur-md bg-black/30 rounded-full px-6 py-4 flex items-center justify-between shadow-md border border-white/10">
+//           {/* Logo */}
+//           <h1 className="text-xl font-black tracking-wide">FUSION FITNESS</h1>
+
+//           {/* Desktop Nav */}
+//           <ul className="hidden md:flex space-x-10 font-medium">
+//             {navLinks.map((link, i) => (
+//               <Motion.li
+//                 key={link.name}
+//                 className="group relative"
+//                 initial={{ opacity: 0, y: -10 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 transition={{ delay: i * 0.1 }}
+//               >
+//                 <Link
+//                   to={link.to}
+//                   className={`text-white transition-all duration-300 ${
+//                     isActive(link.to) ? 'font-bold' : ''
+//                   }`}
+//                 >
+//                   {link.name}
+//                   <span
+//                     className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 
+//                     ${
+//                       isActive(link.to)
+//                         ? 'w-full'
+//                         : 'w-0 group-hover:w-full'
+//                     }`}
+//                   />
+//                 </Link>
+//               </Motion.li>
+//             ))}
+//           </ul>
+
+//           {/* Mobile Toggle */}
+//           <button
+//             className="md:hidden focus:outline-none text-white"
+//             onClick={() => setIsOpen(!isOpen)}
+//           >
+//             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* Animated Mobile Menu */}
+//       <Motion.div
+//         initial={false}
+//         animate={{
+//           scaleY: isOpen ? 1 : 0,
+//           opacity: isOpen ? 1 : 0,
+//         }}
+//         transition={{ duration: 0.3, ease: 'easeInOut' }}
+//         className="md:hidden origin-top bg-black/70 text-white rounded-4xl mx-6 mt-2 px-6 py-4 shadow-md backdrop-blur-md border border-white/10"
+//         style={{ transformOrigin: 'top' }}
+//       >
+//         <ul className="space-y-4 font-medium">
+//           {navLinks.map((link, i) => (
+//             <Motion.li
+//               key={link.name}
+//               className="group relative"
+//               initial={{ opacity: 0, y: 10 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               transition={{ delay: i * 0.1 }}
+//             >
+//               <Link
+//                 to={link.to}
+//                 className={`text-white transition-all duration-300 ${
+//                   isActive(link.to) ? 'font-bold' : ''
+//                 }`}
+//               >
+//                 {link.name}
+//                 <span
+//                   className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 
+//                   ${
+//                     isActive(link.to)
+//                       ? 'w-full'
+//                       : 'w-0 group-hover:w-full'
+//                   }`}
+//                 />
+//               </Link>
+//             </Motion.li>
+//           ))}
+//         </ul>
+//       </Motion.div>
+//     </Motion.nav>
+//   );
+// };
+
+// export default Navbar;
+
+
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { motion as Motion } from 'framer-motion'; // ✅ Properly renamed for ESLint
+import { motion as Motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -408,11 +548,15 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
-  const navLinks = [
+  const leftLinks = [
     { name: 'HOME', to: '/' },
     { name: 'GALLERY', to: '/gallery' },
-    { name: 'APP', to: '/app' },
-    { name: 'ADMISSION', to: '/admission' },
+    { name: 'PROJECTS', to: '/projects' },
+  ];
+
+  const rightLinks = [
+    { name: 'ABOUT', to: '/about' },
+    { name: 'BLOG', to: '/blog' },
     { name: 'CONTACT', to: '/contact' },
   ];
 
@@ -442,40 +586,52 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
-      className="fixed top-0 left-0 w-full z-50 py-4"
+      className="fixed top-0 left-0 w-full z-50 py-4 "
     >
       <div className="max-w-[1440px] mx-auto px-6">
-        <div className="text-white backdrop-blur-md bg-black/30 rounded-full px-6 py-4 flex items-center justify-between shadow-md border border-white/10">
-          {/* Logo */}
-          <h1 className="text-xl font-black tracking-wide">FUSION FITNESS</h1>
-
-          {/* Desktop Nav */}
-          <ul className="hidden md:flex space-x-10 font-medium">
-            {navLinks.map((link, i) => (
-              <Motion.li
-                key={link.name}
-                className="group relative"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-              >
+        <div className="flex items-center justify-between text-white px-6 py-3 rounded-full border border-white/10 shadow-md backdrop-blur-md bg-black/50">
+          {/* Left Links */}
+          <ul className="hidden md:flex space-x-8 font-medium">
+            {leftLinks.map((link) => (
+              <li key={link.name} className="group relative">
                 <Link
                   to={link.to}
-                  className={`text-white transition-all duration-300 ${
-                    isActive(link.to) ? 'font-bold' : ''
+                  className={`transition-all duration-300 ${
+                    isActive(link.to) ? 'font-bold text-white' : 'text-gray-300'
                   }`}
                 >
                   {link.name}
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 
-                    ${
-                      isActive(link.to)
-                        ? 'w-full'
-                        : 'w-0 group-hover:w-full'
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 ${
+                      isActive(link.to) ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
                   />
                 </Link>
-              </Motion.li>
+              </li>
+            ))}
+          </ul>
+
+          {/* Center Logo */}
+          <h1 className="text-4xl font-black tracking-wide">F<span className='text-red-500'>.</span></h1>
+
+          {/* Right Links */}
+          <ul className="hidden md:flex space-x-8 font-medium">
+            {rightLinks.map((link) => (
+              <li key={link.name} className="group relative">
+                <Link
+                  to={link.to}
+                  className={`transition-all duration-300 ${
+                    isActive(link.to) ? 'font-bold text-white' : 'text-gray-300'
+                  }`}
+                >
+                  {link.name}
+                  <span
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 ${
+                      isActive(link.to) ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
+                </Link>
+              </li>
             ))}
           </ul>
 
@@ -489,7 +645,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Animated Mobile Menu */}
+      {/* Mobile Menu */}
       <Motion.div
         initial={false}
         animate={{
@@ -500,32 +656,23 @@ const Navbar = () => {
         className="md:hidden origin-top bg-black/70 text-white rounded-4xl mx-6 mt-2 px-6 py-4 shadow-md backdrop-blur-md border border-white/10"
         style={{ transformOrigin: 'top' }}
       >
-        <ul className="space-y-4 font-medium">
-          {navLinks.map((link, i) => (
-            <Motion.li
-              key={link.name}
-              className="group relative"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-            >
+        <ul className="space-y-4 font-medium text-center">
+          {[...leftLinks, ...rightLinks].map((link) => (
+            <li key={link.name} className="group relative">
               <Link
                 to={link.to}
-                className={`text-white transition-all duration-300 ${
-                  isActive(link.to) ? 'font-bold' : ''
+                className={`transition-all duration-300 ${
+                  isActive(link.to) ? 'font-bold text-white' : 'text-gray-300'
                 }`}
               >
                 {link.name}
                 <span
-                  className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 
-                  ${
-                    isActive(link.to)
-                      ? 'w-full'
-                      : 'w-0 group-hover:w-full'
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 ${
+                    isActive(link.to) ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}
                 />
               </Link>
-            </Motion.li>
+            </li>
           ))}
         </ul>
       </Motion.div>
