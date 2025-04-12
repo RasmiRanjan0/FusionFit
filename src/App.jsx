@@ -1,6 +1,7 @@
 
 import './App.css'
 import Footer2 from './components/Footer2';
+import Footer3 from './components/Footer3';
 
 import Navbar from './components/Navbar'
 import Gallery from './pages/Gallery';
@@ -20,7 +21,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         
       </Routes>
-      <Footer2/>
+      {/* <Footer2/> */}
+      <Footer3/>
     </BrowserRouter>
     </div>
     </>

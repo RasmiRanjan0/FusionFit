@@ -34,7 +34,7 @@ const InfiniteScrollText = () => {
   return (
     <div className="relative w-full overflow-hidden bg-black py-4">
       <Motion.div
-        className="flex whitespace-nowrap text-white text-2xl sm:text-3xl font-extrabold"
+        className="flex whitespace-nowrap text-white text-2xl sm:text-3xl font-semibold"
         animate={controls}
       >
         {[...Array(20)].map((_, i) => (
