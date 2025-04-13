@@ -175,6 +175,233 @@
 
 
 
+// import React from "react";
+// import { motion as Motion } from "framer-motion";
+// import appIllustration from "../../assets/app-illustration.png";
+// import qrCode from "../../assets/qr-code.png";
+// import appStore from "../../assets/app-store.png";
+// import googlePlay from "../../assets/google-play.png";
+
+// // Motion Variants
+// const containerVariants = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.15,
+//     },
+//   },
+// };
+
+// const fadeUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+// };
+
+// const AppSection = () => {
+//   return (
+//     <section className="bg-black text-white py-20 px-6">
+//       {/* Top Label + Heading */}
+//       <Motion.div
+//         variants={containerVariants}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//         className="text-center mb-12"
+//       >
+//         <Motion.p
+//           variants={fadeUp}
+//           className="text-sm uppercase text-gray-400 tracking-widest"
+//         >
+//           • Application
+//         </Motion.p>
+//         <Motion.h2
+//           variants={fadeUp}
+//           className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 leading-snug"
+//         >
+//           FUSION FITNESS COMPLETE APP <br className="hidden sm:block" />
+//           EXPERIENCE
+//         </Motion.h2>
+//       </Motion.div>
+
+//       {/* Main Content */}
+//       <Motion.div
+//         variants={containerVariants}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//         className="bg-[#0a0a0a] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
+//       >
+//         {/* Left Content */}
+//         <Motion.div variants={fadeUp} className="flex-1 text-left">
+//           <h3 className="text-3xl md:text-4xl font-bold mb-4">DOWNLOAD THIS APP</h3>
+//           <p className="text-gray-300 text-sm mb-6 max-w-xl">
+//             Transcend the ordinary with our product line. Here, excellence meets innovation,
+//             bringing you the most advanced technology on the market in a way you've never seen before.
+//             Every detail, every movement, every piece of equipment is designed to deliver an unparalleled 
+//             training experience. With Inception, you don't just train – you evolve.
+//           </p>
+
+//           {/* Buttons + QR */}
+//           <Motion.div
+//             variants={containerVariants}
+//             className="flex flex-col sm:flex-row sm:items-center gap-6 w-full"
+//           >
+//             {/* App Buttons */}
+//             <Motion.div
+//               variants={fadeUp}
+//               className="flex flex-col gap-3 items-start sm:items-start"
+//             >
+//               <img src={appStore} alt="App Store" className="h-10" />
+//               <img src={googlePlay} alt="Google Play" className="h-10" />
+//             </Motion.div>
+
+//             {/* QR Code */}
+//             <Motion.div
+//               variants={fadeUp}
+//               className="bg-[#E5E5E5] rounded-xl p-2 self-center sm:self-auto"
+//             >
+//               <img
+//                 src={qrCode}
+//                 alt="QR Code"
+//                 className="h-24 w-24 object-contain"
+//               />
+//             </Motion.div>
+//           </Motion.div>
+//         </Motion.div>
+
+//         {/* Right Illustration */}
+//         <Motion.div variants={fadeUp} className="flex-1 max-w-sm">
+//           <img
+//             src={appIllustration}
+//             alt="App Illustration"
+//             className="w-full object-contain"
+//           />
+//         </Motion.div>
+//       </Motion.div>
+//     </section>
+//   );
+// };
+
+// export default AppSection;
+
+
+
+// import React from "react";
+// import { motion as Motion } from "framer-motion";
+// import appIllustration from "../../assets/app-illustration.png";
+// import qrCode from "../../assets/qr-code.png";
+// import appStore from "../../assets/app-store.png";
+// import googlePlay from "../../assets/google-play.png";
+
+// // Motion Variants
+// const containerVariants = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.15,
+//     },
+//   },
+// };
+
+// const fadeUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+// };
+
+// const AppSection = () => {
+//   return (
+//     <section className="bg-black text-white py-20 px-6">
+//       {/* Top Label + Heading */}
+//       <Motion.div
+//         variants={containerVariants}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//         className="text-center mb-12"
+//       >
+//         <Motion.p
+//           variants={fadeUp}
+//           className="text-sm uppercase text-gray-400 tracking-widest"
+//         >
+//           • Application
+//         </Motion.p>
+//         <Motion.h2
+//           variants={fadeUp}
+//           className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 leading-snug"
+//         >
+//           FUSION FITNESS COMPLETE APP <br className="hidden sm:block" />
+//           EXPERIENCE
+//         </Motion.h2>
+//       </Motion.div>
+
+//       {/* Main Content */}
+//       <Motion.div
+//         variants={containerVariants}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//         className="bg-[#1a1a1a] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
+//       >
+//         {/* Left Content */}
+//         <Motion.div variants={fadeUp} className="flex-1 text-left w-full">
+//           <h3 className="text-3xl md:text-4xl font-bold mb-4">DOWNLOAD THIS APP</h3>
+//           <p className="text-gray-300 text-sm mb-6 max-w-xl">
+//             Transcend the ordinary with our product line. Here, excellence meets innovation,
+//             bringing you the most advanced technology on the market in a way you've never seen before.
+//             Every detail, every movement, every piece of equipment is designed to deliver an unparalleled 
+//             training experience. With Inception, you don't just train – you evolve.
+//           </p>
+
+//           {/* Buttons + QR */}
+//           <Motion.div
+//             variants={containerVariants}
+//             className="flex flex-col sm:flex-row sm:items-center gap-6 w-full"
+//           >
+//             {/* App Buttons */}
+//             <Motion.div
+//               variants={fadeUp}
+//               className="flex flex-row gap-3 justify-center sm:justify-start w-full"
+//             >
+//               <img src={appStore} alt="App Store" className="h-10" />
+//               <img src={googlePlay} alt="Google Play" className="h-10" />
+//             </Motion.div>
+
+//             {/* QR Code - Fully centered on mobile */}
+//             <Motion.div
+//               variants={fadeUp}
+//               className="bg-[#E5E5E5] rounded-xl p-2 mx-auto sm:mx-0"
+//             >
+//               <img
+//                 src={qrCode}
+//                 alt="QR Code"
+//                 className="h-24 w-24 object-contain"
+//               />
+//             </Motion.div>
+//           </Motion.div>
+//         </Motion.div>
+
+//         {/* Right Illustration (Hidden on mobile) */}
+//         <Motion.div
+//           variants={fadeUp}
+//           className="flex-1 max-w-sm hidden lg:block"
+//         >
+//           <img
+//             src={appIllustration}
+//             alt="App Illustration"
+//             className="w-full object-contain"
+//           />
+//         </Motion.div>
+//       </Motion.div>
+//     </section>
+//   );
+// };
+
+// export default AppSection;
+
+
+
+
+
 import React from "react";
 import { motion as Motion } from "framer-motion";
 import appIllustration from "../../assets/app-illustration.png";
@@ -200,7 +427,7 @@ const fadeUp = {
 const AppSection = () => {
   return (
     <section className="bg-black text-white py-20 px-6">
-      {/* Top Label + Heading */}
+      {/* Heading */}
       <Motion.div
         variants={containerVariants}
         initial="hidden"
@@ -223,33 +450,33 @@ const AppSection = () => {
         </Motion.h2>
       </Motion.div>
 
-      {/* Main Content */}
+      {/* Main Content Block */}
       <Motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="bg-[#0a0a0a] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
+        className="bg-[#1a1a1a] rounded-4xl p-6 md:p-12 flex flex-col lg:flex-row gap-12 items-center justify-between max-w-[1440px] mx-auto shadow-xl"
       >
-        {/* Left Content */}
-        <Motion.div variants={fadeUp} className="flex-1 text-left">
+        {/* Left Section */}
+        <Motion.div variants={fadeUp} className="flex-1 w-full text-left max-w-xl">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">DOWNLOAD THIS APP</h3>
-          <p className="text-gray-300 text-sm mb-6 max-w-xl">
+          <p className="text-gray-300 text-sm mb-8">
             Transcend the ordinary with our product line. Here, excellence meets innovation,
             bringing you the most advanced technology on the market in a way you've never seen before.
             Every detail, every movement, every piece of equipment is designed to deliver an unparalleled 
             training experience. With Inception, you don't just train – you evolve.
           </p>
 
-          {/* Buttons + QR */}
+          {/* App Buttons + QR */}
           <Motion.div
             variants={containerVariants}
-            className="flex flex-col sm:flex-row sm:items-center gap-6 w-full"
+            className="flex flex-col sm:flex-row sm:items-center gap-6"
           >
-            {/* App Buttons */}
+            {/* App Store Buttons */}
             <Motion.div
               variants={fadeUp}
-              className="flex flex-col gap-3 items-start sm:items-start"
+              className="flex gap-3 sm:gap-4 justify-center sm:justify-start"
             >
               <img src={appStore} alt="App Store" className="h-10" />
               <img src={googlePlay} alt="Google Play" className="h-10" />
@@ -258,7 +485,7 @@ const AppSection = () => {
             {/* QR Code */}
             <Motion.div
               variants={fadeUp}
-              className="bg-[#E5E5E5] rounded-xl p-2 self-center sm:self-auto"
+              className="bg-[#E5E5E5] rounded-xl p-2 mx-auto sm:mx-0"
             >
               <img
                 src={qrCode}
@@ -269,11 +496,14 @@ const AppSection = () => {
           </Motion.div>
         </Motion.div>
 
-        {/* Right Illustration */}
-        <Motion.div variants={fadeUp} className="flex-1 max-w-sm">
+        {/* Right Illustration - Only Desktop */}
+        <Motion.div
+          variants={fadeUp}
+          className="flex-1 max-w-md hidden lg:block"
+        >
           <img
             src={appIllustration}
-            alt="App Illustration"
+            alt="App"
             className="w-full object-contain"
           />
         </Motion.div>

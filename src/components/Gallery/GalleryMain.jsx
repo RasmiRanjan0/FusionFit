@@ -224,7 +224,7 @@ const GalleryMain = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white px-4 py-12 pt-32 min-h-screen">
+    <section className=" text-white px-4 py-12 pt-32 min-h-screen">
       {/* Title */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-2">
         <p className="text-sm font-mono tracking-widest">[ SELECTED PROJECTS ]</p>
@@ -235,7 +235,7 @@ const GalleryMain = () => {
       </div>
 
       {/* Gallery Grid with staggered animation */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
         {images.map((img, index) => (
           <MotionDiv
             key={index}

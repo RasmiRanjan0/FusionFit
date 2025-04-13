@@ -85,7 +85,7 @@ const stats = [
 
 const OurJourney = () => {
   return (
-    <section className="text-white px-6 py-20 md:px-16 lg:px-0 max-w-[1440px] mx-auto">
+    <section className="text-white px-6 py-0 lg:py-20 md:px-16 lg:px-0 max-w-[1440px] mx-auto">
       {/* Section Heading */}
       <div className="text-center mb-12">
         <p className="text-xs text-gray-400 uppercase tracking-widest">• Journey</p>

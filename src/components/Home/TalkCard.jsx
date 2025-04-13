@@ -61,7 +61,7 @@ const TalkCard = () => {
         }}
       >
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/70 to-[#000000]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/80 to-[#000000]/80 lg:from-[#000000]/70 lg:to-[#000000]/60" />
 
         {/* Content */}
         <div className="relative px-6 sm:px-12 py-20 z-10">

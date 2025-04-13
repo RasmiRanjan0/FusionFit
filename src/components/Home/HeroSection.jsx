@@ -137,9 +137,10 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="z-10 text-[14vw] font-bold text-white leading-none text-center"
+        className="z-10 text-[15vw] lg:text-[9vw] font-bold text-white leading-none text-center"
       >
-        FUSION FITNESS
+        FUSION 
+        <span className='text-red-500'> FITNESS </span>
       </Motion.h1>
 
       {/* Bottom Left Text */}
@@ -147,7 +148,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="absolute bottom-6 left-6 text-xs sm:text-sm text-white font-medium z-10 text-left 2xl:pl-[12%] "
+        className="absolute bottom-12  2xl:bottom-6 left-6 text-xs sm:text-sm text-white font-medium z-10 text-left 2xl:pl-[12%] "
       >
         EMBRACE THE <br /> POWER WITHIN
       </Motion.div>
@@ -157,7 +158,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
-        className="absolute bottom-6 right-6 flex items-center gap-4 text-lg z-10 2xl:pr-[12%]"
+        className="absolute bottom-12  2xl:bottom-6 right-6 flex items-center gap-4 text-lg z-10 2xl:pr-[12%]"
       >
         <a href="#" className="hover:text-gray-300 transition">
           <FaInstagram />
