@@ -140,7 +140,7 @@ const HeroSection = () => {
         className="z-10 text-[15vw] lg:text-[9vw] font-bold text-white leading-none text-center"
       >
         FUSION 
-        <span className='text-red-500'>FITNESS </span>
+        <span className='text-red-500'> FITNESS </span>
       </Motion.h1>
 
       {/* Bottom Left Text */}
