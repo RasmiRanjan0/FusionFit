@@ -393,9 +393,9 @@ import trainer2 from '../../assets/trainer2.jpg';
 import trainer3 from '../../assets/trainer3.jpg';
 
 const trainers = [
-  { name: 'Rose lite Miles', title: 'Senior Fitness', image: trainer1 },
-  { name: 'Floyd Miles rose', title: 'Senior Fitness', image: trainer2 },
-  { name: 'Floyd Miles', title: 'Senior Fitness', image: trainer3 },
+  { name: 'Sudhir', title: 'Senior Fitness', image: trainer1 },
+  { name: 'Riya', title: 'Senior Fitness', image: trainer2 },
+  { name: 'D. Ramesh', title: 'Jumba', image: trainer3 },
 ];
 
 // Motion Variants
@@ -476,7 +476,8 @@ const OurTrainer = () => {
       </Motion.div>
 
       {/* CTA Button */}
-      <Motion.div
+
+      {/* <Motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -484,7 +485,7 @@ const OurTrainer = () => {
         className="mt-10 flex justify-center items-center"
       >
         <Button1 label="VIEW ALL TRAINERS" />
-      </Motion.div>
+      </Motion.div> */}
     </section>
   );
 };

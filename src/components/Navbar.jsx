@@ -885,12 +885,12 @@ const Navbar = () => {
   const leftLinks = [
     { name: 'HOME', to: '/' },
     { name: 'GALLERY', to: '/gallery' },
-    { name: 'PROJECTS', to: '/projects' },
+    { name: 'MEMBERSHIPS', to: '/memberships' },
   ];
 
   const rightLinks = [
     { name: 'ABOUT', to: '/about' },
-    { name: 'BLOG', to: '/blog' },
+    { name: 'PROGRAMS', to: '/programs' },
     { name: 'CONTACT', to: '/contact' },
   ];
 

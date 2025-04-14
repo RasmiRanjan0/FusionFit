@@ -529,6 +529,9 @@ const services = [
   { title: 'MINDFUL MEDITAION', image: machinesImg },
   { title: 'FUNCTIONAL FITNESS', image: careImg },
   { title: 'YOGA FUSION', image: gaasImg },
+  { title: 'CROSSFIT', image: machinesImg },
+  { title: 'ZUMBA', image: careImg },
+  { title: 'CARDIO', image: gaasImg },
 ];
 
 // Motion Variants
@@ -559,7 +562,7 @@ const fadeUp = {
 
 const OurClasses = () => {
   return (
-    <section className="px-6 py-16 md:px-20 text-white">
+    <section className=" bg-black px-6 py-16 md:px-20 text-white">
       {/* Section Title */}
       <Motion.div
         variants={fadeUp}
@@ -607,7 +610,8 @@ const OurClasses = () => {
       </Motion.div>
 
       {/* CTA Button */}
-      <Motion.div
+      
+      {/* <Motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -616,7 +620,7 @@ const OurClasses = () => {
         className="mt-12 flex justify-center"
       >
         <Button1 label="ALL CLASSES" onClick={() => console.log("View All Clicked")} />
-      </Motion.div>
+      </Motion.div> */}
     </section>
   );
 };

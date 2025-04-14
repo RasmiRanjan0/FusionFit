@@ -175,7 +175,7 @@ const Footer3 = () => {
 
         {/* Nav links */}
         <nav className="flex flex-wrap justify-center md:justify-end gap-5 text-sm font-medium text-gray-400">
-          {['ABOUT', 'CLASSES', 'MEMBERSHIPS', 'CONTACT', 'BLOG', 'LICENSE'].map((link, idx) => (
+          {['HOME', 'GALLERY', 'MEMBERSHIPS', 'ABOUT', 'PROGRAMS', 'CONTACT'].map((link, idx) => (
             <a
               key={idx}
               href="#"
@@ -194,9 +194,9 @@ const Footer3 = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="text-4xl sm:text-6xl md:text-7xl font-light"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-normal"
         >
-          FUSIONFITNESS
+          FUSION<span className='text-red-500'>FITNESS</span>
         </Motion.h2>
 
         {/* Contact */}

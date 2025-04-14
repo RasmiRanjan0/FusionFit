@@ -19,12 +19,12 @@ const Home = () => {
   return (
     <div>
         <HeroSection/>
-        <AppSection/>
-        <InfiniteScrollText/>
         <OurClasses/>
+        <InfiniteScrollText/>
         <OurTrainer/>
-        <PricingPlans/>
         <OurJourney/>
+        <AppSection/>
+        <PricingPlans/>
         <Reviews/>
         <FAQ/>
         <TalkCard/>

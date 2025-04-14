@@ -47,7 +47,7 @@ import bgImage from '../../assets/talk-bg.jpg'; // Make sure this path is correc
 
 const TalkCard = () => {
   return (
-    <section className="px-4 py-20 max-w-[1440px] mx-auto">
+    <section className="px-4 lg:px-0 py-20 max-w-[1440px] mx-auto">
       <Motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-[#0a0a0a]' >
+    <div className='bg-[#080808]' >
 
     <BrowserRouter>
       <Navbar />

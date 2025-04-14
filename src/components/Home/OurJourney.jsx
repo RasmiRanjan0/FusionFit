@@ -70,15 +70,15 @@ import journeyImg from '../../assets/our-journey.jpg'; // Replace with your imag
 
 const stats = [
   {
-    value: '984 Members',
+    value: '545 Members',
     description: 'Active members in our fitness community.',
   },
   {
-    value: '24 Sessions',
+    value: '12 Sessions',
     description: 'Diverse workouts for every level.',
   },
   {
-    value: '15+ Coaches',
+    value: '3+ Coaches',
     description: 'Expert coaches for your fitness success.',
   },
 ];
