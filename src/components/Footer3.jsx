@@ -196,7 +196,7 @@ const Footer3 = () => {
           transition={{ duration: 0.7, ease: 'easeOut' }}
           className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-normal"
         >
-          FUSION<span className='text-red-500'>FITNESS</span>
+          FUSION<span className='text-red-500'> FITNESS</span>
         </Motion.h2>
 
         {/* Contact */}
@@ -204,7 +204,7 @@ const Footer3 = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
-          className="space-y-2 text-sm"
+          className="space-y-2 text-sm md:flex md:flex-col md:items-end " 
         >
           <p className="text-white font-medium">CONTACT@ZENFIT.COM</p>
           <p className="text-gray-400">(555) 123-4567</p>
