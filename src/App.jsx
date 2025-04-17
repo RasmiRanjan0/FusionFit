@@ -8,6 +8,9 @@ import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Home from './pages/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Memberships from './pages/Memberships';
+import Programs from './pages/Programs';
+import Contact from './pages/Contact';
 function App() {
 
 
@@ -21,6 +24,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
+        <Route path='/memberships' element = {<Memberships/>} />
+        <Route path='/programs' element = { <Programs/> } />
+        <Route path='/Contact' element = { <Contact/> } />
         
         
       </Routes>

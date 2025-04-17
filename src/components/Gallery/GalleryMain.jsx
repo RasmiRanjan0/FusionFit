@@ -400,10 +400,10 @@ const GalleryMain = () => {
   };
 
   return (
-    <section className="text-white px-4 py-12 pt-32 min-h-screen">
+    <section className="text-white px-4 py-12 pt-9 min-h-screen  max-w-[1440px] mx-auto">
       {/* Title */}
       <div className="flex flex-col justify-between items-center mb-9 gap-2">
-        <p className="text-sm font-mono tracking-widest">[ SELECTED PHOTOS ]</p>
+        <p className="text-md font-mono tracking-widest">[ SELECTED PHOTOS ]</p>
         {/* <div className="text-xs sm:text-sm">
           <a href="#" className="underline mr-1">GRID</a>
           / <a href="#" className="ml-1 hover:underline">LIST</a>
