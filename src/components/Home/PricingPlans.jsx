@@ -291,9 +291,9 @@ import pricingImg from '../../assets/pricing-image.jpg'; // Replace path
 
 const plans = [
   {
-    label: 'Pro',
-    name: 'STANDARD',
-    price: '$ 900.00 USD',
+    label: 'Standard ',
+    name: 'STANDARD PLAN FOR 6 MONTH',
+    price: '₹ 6,000 INR ',
     description: 'Enjoy our state-of-the-art gym equipment, spacious workout areas.',
     features: [
       'Personalized Training',
@@ -304,9 +304,9 @@ const plans = [
     ],
   },
   {
-    label: 'Elite',
-    name: 'PREMIUM',
-    price: '$ 1,200.00 USD',
+    label: 'Premium',
+    name: 'PREMIUM PLAN FOR 1 YEAR ',
+    price: '₹ 12,000 INR',
     description:
       'Enjoy personalized training sessions, classes, and access to all premium amenities.',
     features: [

@@ -10,7 +10,7 @@ import OurTrainer from '../components/Home/OurTrainer'
 import PricingPlans from '../components/Home/PricingPlans'
 import OurJourney from '../components/Home/OurJourney'
 import Reviews from '../components/Home/Reviews'
-import FAQ from '../components/Home/FAQ'
+// import FAQ from '../components/Home/FAQ'
 import TalkCard from '../components/Home/TalkCard'
 import HeroSection from '../components/Home/HeroSection'
 
@@ -26,7 +26,7 @@ const Home = () => {
         <AppSection/>
         <PricingPlans/>
         <Reviews/>
-        <FAQ/>
+        {/* <FAQ/> */}
         <TalkCard/>
         {/* <OurMachines/> */}
     </div>

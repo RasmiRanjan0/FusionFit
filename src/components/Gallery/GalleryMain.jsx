@@ -289,10 +289,14 @@ const MotionDiv = motion.div;
 const images = [
   { src: '/images/gym-hero-bg1.jpg', alt: 'Project 1' },
   { src: '/images/gym-hero-bg.jpg', alt: 'Project 2' },
-  { src: '/images/fitness-bg.png', alt: 'Project 3' },
-  { src: '/images/gym-hero-bg1.jpg', alt: 'Project 4' },
-  { src: '/images/gym-hero-bg.jpg', alt: 'Project 5' },
-  { src: '/images/fitness-bg.png', alt: 'Project 6' },
+  { src: '/images/Lin/1.jpeg ', alt: '1' },
+  { src: '/images/Lin/2.jpeg ', alt: '2' },
+  { src: '/images/Lin/3.jpeg ', alt: '3' },
+  { src: '/images/Lin/4.jpeg ', alt: '4' },
+  { src: '/images/Lin/5.jpeg ', alt: '5' },
+  { src: '/images/Lin/6.jpeg ', alt: '6' },
+  { src: '/images/Lin/7.jpeg ', alt: '7' },
+  
 ];
 
 const GalleryMain = () => {

@@ -276,7 +276,7 @@ const Footer3 = () => {
         >
           {/* Powered by */}
           <div className="text-xs text-gray-400">
-            <p>Powered by <span className="font-semibold">DevAffairs</span></p>
+            <p>Developed by <span className="font-semibold">DevAffairs</span></p>
           </div>
 
           {/* Nav Links */}
@@ -316,9 +316,9 @@ const Footer3 = () => {
             viewport={{ once: true }}
             className="space-y-2 text-sm md:flex md:flex-col md:items-end"
           >
-            <p className="text-white font-medium">CONTACT@ZENFIT.COM</p>
+            <p className="text-white font-medium">CONTACT@FUSIONFITNESS.COM</p>
             <p className="text-gray-400">(555) 123-4567</p>
-            <p className="text-gray-400">123 FITNESS STREET, GYMTOWN, FITLAND</p>
+            <p className="text-gray-400">123 FITNESS STREET, BBSR, ODISHA</p>
 
             {/* Social Icons */}
             <div className="flex justify-center md:justify-start gap-4 pt-3 text-white text-lg">

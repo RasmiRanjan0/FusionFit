@@ -5,8 +5,8 @@ import { FaCheckCircle } from 'react-icons/fa';
 const plans = [
   {
     label: 'Normal',
-    name: 'NORMAL PLAN',
-    price: '$ 500.00 USD',
+    name: 'NORMAL PLAN FOR 1 MONTH',
+    price: '₹ 1,500 INR',
     description: 'Access to basic fitness facilities and essential group classes.',
     features: [
       'Basic Equipment Access',
@@ -17,9 +17,9 @@ const plans = [
     buttonText: 'Join Now',
   },
   {
-    label: 'Pro',
-    name: 'STANDARD',
-    price: '$ 900.00 USD',
+    label: 'Standard ',
+    name: 'STANDARD PLAN FOR 6 MONTH',
+    price: '₹ 6,000 INR ',
     description: 'Enjoy our state-of-the-art gym equipment, spacious workout areas.',
     features: [
       'Personalized Training',
@@ -31,9 +31,9 @@ const plans = [
     buttonText: 'Get Started',
   },
   {
-    label: 'Elite',
-    name: 'PREMIUM',
-    price: '$ 1,200.00 USD',
+    label: 'Premium',
+    name: 'PREMIUM PLAN FOR 1 YEAR ',
+    price: '₹ 12,000 INR',
     description: 'Enjoy personalized training sessions and premium amenities.',
     features: [
       'Personalized Training',
